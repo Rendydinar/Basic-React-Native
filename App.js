@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -57,11 +57,22 @@ const App: () => Node = () => {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    height: "100%",
+    width: "100%",
   };
+
+  const statuBarStyle = {
+
+  }
+
+  useEffect(() => {
+    StatusBar.setHidden(true);
+  }, [])
+
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar style={statuBarStyle} barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -71,16 +82,17 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Langkah Pertama">
-            <Text style={styles.highlight}>Selamat Belajar Ya, Semangattt</Text>
+            Awali Dengan Doa
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="Langkah Kedua">
+            Buka Situs Dokumentasi React-Native
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+          <Section title="Langkah Ketiga">
+            Belajar Dari Berbagai Sumber Yang Kredibel
           </Section>
-          <Section title="Learn More">
-            Sedang Belajar React Navite Biar Bikin Apps Kayak Instagram, Facebook, Whatsapp dan mengagumkan lainnya.
+          <Section title="Jangan Menyerah">
+            <Text style={styles.highlight}>Selamat Belajar Ya, Semangat ^_^</Text> {"\n"}
+            Biar Bikin Apps Kayak Instagram, Facebook, Whatsapp dan Mengagumkan lainnya.
           </Section>
           <LearnMoreLinks />
         </View>

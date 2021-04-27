@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -14,78 +14,48 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  Image,
   useColorScheme,
   View,
+  TextInput,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+const Header = () => {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+    <Text style={{backgroundColor: '#0984e3'}}>Header</Text>
+  )
+}
+
+const Hero = ()=> {
+  return (
+    <Image
+      source={{
+        uri: 'https://wallpaperaccess.com/full/24539.jpg'
+      }}
+      style={{width: '50%', height: '50%'}}
+    />
+  )
+}
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  useEffect(() => {
+    StatusBar.setHidden(true);
+  }, [])
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header title={"Rendy Dendimara"} />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Langkah Pertama">
-            <Text style={styles.highlight}>Selamat Belajar Ya, Semangattt</Text>
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Sedang Belajar React Navite Biar Bikin Apps Kayak Instagram, Facebook, Whatsapp dan mengagumkan lainnya.
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={{backgroundColor: '#74b9ff', height: '100%', width: '100%'}}>
+      <StatusBar 
+        barStyle={'dark-content'} 
+      />
+      <Header />
+      <Text>Rendy Dendimara</Text>
+      <Hero/>
+      <TextInput
+        style={{
+          borderWidth: 1,
+        }}
+      />
+    </View>
   );
 };
 

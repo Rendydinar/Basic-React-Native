@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment, Component } from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -32,7 +32,7 @@ const Hero = ()=> {
       source={{
         uri: 'https://wallpaperaccess.com/full/24539.jpg'
       }}
-      style={{width: '50%', height: '50%'}}
+      style={{width: '100%', height: '50%'}}
     />
   )
 }
@@ -48,16 +48,25 @@ const App: () => Node = () => {
         barStyle={'dark-content'} 
       />
       <Header />
-      <Text>Rendy Dendimara</Text>
+      <Text>Rendy</Text>
       <Hero/>
       <TextInput
         style={{
           borderWidth: 1,
         }}
       />
+      <BoxGreen />
     </View>
   );
 };
+
+class BoxGreen extends Component {
+  render() {
+    return (
+      <Text> Class Component </Text>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   sectionContainer: {

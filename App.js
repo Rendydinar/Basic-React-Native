@@ -20,6 +20,8 @@ import {
   TextInput,
 } from 'react-native';
 
+import MacBook from "./mac.jpg"
+
 const Header = () => {
   return (
     <Text style={{backgroundColor: '#0984e3'}}>Header</Text>
@@ -37,11 +39,7 @@ const Hero = ()=> {
   )
 }
 
-const App: () => Node = () => {
-  useEffect(() => {
-    StatusBar.setHidden(true);
-  }, [])
-
+const SampleCompoent = () => {
   return (
     <View style={{backgroundColor: '#74b9ff', height: '100%', width: '100%'}}>
       <StatusBar 
@@ -57,6 +55,122 @@ const App: () => Node = () => {
       />
       <BoxGreen />
     </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#00b894',
+    marginTop: 30,
+    marginLeft: 20
+  }
+});
+
+const StylingReactNaviteComponent = () => {
+  return (
+    <View 
+      style={{
+        marginBottom: 30
+      }}
+    >
+      <Text style={styles.text}>Styling Component</Text>
+      <View
+        style={{
+          width: 100, // ukuran yang fix ()
+          height: 100,
+          backgroundColor: '#00b894',
+          borderWidth: 2,
+          borderColor: '#55efc4',
+          marginTop: 20
+        }}
+      >
+      </View>
+    </View>
+  )
+}
+
+const CardProduct = () => {
+  return (
+    <View
+      style={{
+        padding: 12,
+        backgroundColor: '#F2F2F2',
+        width: 212,
+        borderRadius: 8
+      }}
+    >
+      <Image
+        source={MacBook}
+        style={{
+          width: 188,
+          height:107,
+          borderRadius: 8
+        }}
+      />
+      <Text
+        style={{
+           fontSize: 14,
+           fontWeight: 'bold',
+           marginTop: 16
+        }}
+      >
+        New MacBook 2020
+      </Text>
+      <Text 
+        style={{
+          fontSize: 12,
+          fontWeight: 'bold',
+          color: '#F2994A',
+          marginTop: 12
+        }}
+      >
+        Rp. 25.000.000
+      </Text>
+      <Text 
+        style={{
+          fontSize: 12,
+          fontWeight: '300',
+          marginTop:12
+        }}
+      >
+        Jakarta Barat
+      </Text>
+      <View
+        style={{
+          backgroundColor: '#6FCF97',
+          paddingVertical: 6,
+          borderRadius: 25,
+          marginTop: 20
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 14,
+            fontWeight: '600',
+            color: 'white',
+            textAlign: 'center'
+          }}
+        > 
+          Beli 
+        </Text>
+      </View>
+
+    </View>
+  )
+}
+
+const App = () => {
+  useEffect(() => {
+    StatusBar.setHidden(true);
+  }, [])
+
+  return (
+    <View>
+    <StylingReactNaviteComponent />
+    <CardProduct />
+    </View>
   );
 };
 
@@ -67,24 +181,5 @@ class BoxGreen extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;

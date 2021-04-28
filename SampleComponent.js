@@ -41,7 +41,7 @@ class BoxGreen extends Component {
 
 const SampleCompoent = () => {
   return (
-    <View style={{backgroundColor: '#74b9ff', height: '100%', width: '100%'}}>
+    <View>
       <StatusBar 
         barStyle={'dark-content'} 
       />

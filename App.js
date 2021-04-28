@@ -16,7 +16,7 @@ import SampleComponent from "./SampleComponent"
 import StylingReactNaviteComponent from "./StylingReactNaviteComponent"
 import CardProduct from "./CardProduct"
 import MateriFlexBox from "./MateriFlexBox"
-
+import PositionReactNative from "./PositionReactNative"
 const App = () => {
   useEffect(() => {
     StatusBar.setHidden(true);
@@ -25,10 +25,11 @@ const App = () => {
   return (
     <View>
       <ScrollView>
-        {/*<StylingReactNaviteComponent />
+        <StylingReactNaviteComponent />
         <CardProduct />
-        <SampleComponent />*/}
+        <SampleComponent />
         <MateriFlexBox/>
+        <PositionReactNative/>
       </ScrollView>
     </View>
   );

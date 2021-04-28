@@ -5,9 +5,9 @@ import {
 	Text,
 	Image,
 } from 'react-native'
-import cart from "./mac.jpg"
+import cart from "../../assets/image/mac.jpg"
 
-const PositionReactNative = () => {
+const Position = () => {
 	return (
 		<View style={styles.wrapper}>
 			<Text style={styles.titleCourse}>Materi Position</Text>
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
 	}
 })
 
-export default PositionReactNative
+export default Position

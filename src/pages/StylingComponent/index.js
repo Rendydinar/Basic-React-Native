@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const StylingReactNaviteComponent = () => {
+const StylingComponent = () => {
   return (
     <View 
       style={{
@@ -47,4 +47,4 @@ const StylingReactNaviteComponent = () => {
 }
 
 
-export default StylingReactNaviteComponent;
+export default StylingComponent;

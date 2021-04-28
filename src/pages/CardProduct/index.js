@@ -6,7 +6,7 @@ import {
   Image,
   Text
 } from 'react-native';
-import MacBook from "./mac.jpg"
+import MacBook from "../../assets/image/mac.jpg"
 
 const CardProduct = () => {
   return (

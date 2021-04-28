@@ -1,1 +1,1 @@
-Memahami menentukan positioning di react-native
+Membuat struktur folder project react native lebih terstruktur.

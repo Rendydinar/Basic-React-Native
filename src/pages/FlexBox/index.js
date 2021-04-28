@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, Fragment, Component } from 'react';
 import type {Node} from 'react';
 import {
@@ -13,7 +12,7 @@ import {
   TextInput,
 } from 'react-native';
 
-const MateriFlexBox = () => {
+const FlexBox = () => {
 	return (
 		<View>
 			<Text
@@ -108,4 +107,4 @@ const MateriFlexBox = () => {
 	)
 }
 
-export default MateriFlexBox;
+export default FlexBox;

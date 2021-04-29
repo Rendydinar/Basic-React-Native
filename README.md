@@ -1,1 +1,1 @@
-Membuat struktur folder project react native lebih terstruktur.
+Belajar Lifecycle Pada React-Native

@@ -18,8 +18,14 @@ import CardProduct from "./src/pages/CardProduct"
 import FlexBox from "./src/pages/FlexBox"
 import Position from "./src/pages/Position"
 const App = () => {
+  const [isShow, setIsShow] = useState(true);
+
   useEffect(() => {
     StatusBar.setHidden(true);
+    setIsShow(true)
+    setTimeout(() => {
+      setIsShow(false)
+    }, 6000);
   }, [])
 
   return (
@@ -28,7 +34,7 @@ const App = () => {
         <StylingComponent />
         <CardProduct />
         <SampleComponent />
-        <FlexBox/>
+        {isShow && <FlexBox/>}
         <Position/>
       </ScrollView>
     </View>

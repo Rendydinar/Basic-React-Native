@@ -19,22 +19,23 @@ import FlexBox from "./src/pages/FlexBox"
 import Position from "./src/pages/Position"
 import PropsDinamis from "./src/pages/PropsDinamis"
 import StateDinamis from "./src/pages/StateDinamis"
+import CommunicationComponent from "./src/pages/CommunicationComponent"
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
 
-  useEffect(() => {
-    StatusBar.setHidden(true);
-    setIsShow(true)
-    setTimeout(() => {
-      setIsShow(false)
-    }, 6000);
-  }, [])
+  // useEffect(() => {
+  //   StatusBar.setHidden(true);
+  //   setIsShow(true)
+  //   setTimeout(() => {
+  //     setIsShow(false)
+  //   }, 6000);
+  // }, [])
 
   return (
     <View>
       <ScrollView>
-        {/*<StylingComponent />
+        <StylingComponent />
         <CardProduct />
         <SampleComponent />
         {isShow && (
@@ -43,8 +44,9 @@ const App = () => {
             <Position/>
           </Fragment>
         )}
-        <PropsDinamis />*/}
+        <PropsDinamis />
         <StateDinamis />
+        <CommunicationComponent />
       </ScrollView>
     </View>
   );

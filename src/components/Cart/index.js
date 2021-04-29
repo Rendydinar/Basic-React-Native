@@ -1,36 +1,37 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { 
-	StyleSheet, 
 	View, 
 	Text,
 	Image,
+	StyleSheet,
 } from 'react-native'
 import cart from "../../assets/icons/cart.png"
 
-const Position = () => {
-	const [stok, setStok] = useState(10)
-	useEffect(() => {
-		setTimeout(() => {
-			setStok(50);
-		}, 4000);
-		return () => {
-			console.log('did update');
-		}
-	}, [stok])
-
+const Cart = (props) => {
 	return (
-		<View style={styles.wrapper}>
-			<Text style={styles.titleCourse}>Materi Position</Text>
+		<View>
 			<View
 				style={styles.cartWrapper}
 			>
-				<Image source={cart} style={styles.iconCart} />
-				<Text style={styles.notif}>{stok}</Text>
+				<Image 
+					source={cart}
+					style={styles.iconCart}
+				/>
+				<Text
+					style={styles.notif}
+				> {props.quantity}
+				</Text>
 			</View>
-			<Text style={styles.text }>Keranjang Belanja Anda</Text>
+			<Text
+				style={styles.text}
+			>
+				Keranjang Belanja Anda
+			</Text>
 		</View>
 	)
 }
+
+export default Cart
 
 const styles = StyleSheet.create({
 	wrapper: {
@@ -39,8 +40,8 @@ const styles = StyleSheet.create({
 		marginTop: 20
 	},
 	iconCart: {
-		width: 50,
-		height:50
+		width: 90,
+		height:90
 	},
 	text: {
 		fontSize: 12, 
@@ -77,5 +78,3 @@ const styles = StyleSheet.create({
 		marginBottom: 10,
 	}
 })
-
-export default Position

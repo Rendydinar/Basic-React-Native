@@ -17,6 +17,7 @@ import StylingComponent from "./src/pages/StylingComponent"
 import CardProduct from "./src/pages/CardProduct"
 import FlexBox from "./src/pages/FlexBox"
 import Position from "./src/pages/Position"
+import PropsDinamis from "./src/pages/PropsDinamis"
 const App = () => {
   const [isShow, setIsShow] = useState(true);
 
@@ -31,7 +32,7 @@ const App = () => {
   return (
     <View>
       <ScrollView>
-        <StylingComponent />
+        {/*<StylingComponent />
         <CardProduct />
         <SampleComponent />
         {isShow && (
@@ -39,7 +40,8 @@ const App = () => {
             <FlexBox/>
             <Position/>
           </Fragment>
-        )}
+        )}*/}
+        <PropsDinamis />
       </ScrollView>
     </View>
   );

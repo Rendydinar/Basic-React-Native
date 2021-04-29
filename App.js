@@ -18,6 +18,8 @@ import CardProduct from "./src/pages/CardProduct"
 import FlexBox from "./src/pages/FlexBox"
 import Position from "./src/pages/Position"
 import PropsDinamis from "./src/pages/PropsDinamis"
+import StateDinamis from "./src/pages/StateDinamis"
+
 const App = () => {
   const [isShow, setIsShow] = useState(true);
 
@@ -40,8 +42,9 @@ const App = () => {
             <FlexBox/>
             <Position/>
           </Fragment>
-        )}*/}
-        <PropsDinamis />
+        )}
+        <PropsDinamis />*/}
+        <StateDinamis />
       </ScrollView>
     </View>
   );

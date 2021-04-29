@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { 
 	StyleSheet, 
 	View, 
@@ -8,6 +8,16 @@ import {
 import cart from "../../assets/image/mac.jpg"
 
 const Position = () => {
+	const [stok, setStok] = useState(10)
+	useEffect(() => {
+		setTimeout(() => {
+			setStok(50);
+		}, 4000);
+		return () => {
+			console.log('did update');
+		}
+	}, [stok])
+
 	return (
 		<View style={styles.wrapper}>
 			<Text style={styles.titleCourse}>Materi Position</Text>
@@ -15,7 +25,7 @@ const Position = () => {
 				style={styles.cartWrapper}
 			>
 				<Image source={cart} style={styles.iconCart} />
-				<Text style={styles.notif}>10</Text>
+				<Text style={styles.notif}>{stok}</Text>
 			</View>
 			<Text style={styles.text }>Keranjang Belanja Anda</Text>
 		</View>

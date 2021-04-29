@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment} from 'react';
 import {
   ScrollView,
   StatusBar,
@@ -34,8 +34,12 @@ const App = () => {
         <StylingComponent />
         <CardProduct />
         <SampleComponent />
-        {isShow && <FlexBox/>}
-        <Position/>
+        {isShow && (
+          <Fragment>
+            <FlexBox/>
+            <Position/>
+          </Fragment>
+        )}
       </ScrollView>
     </View>
   );

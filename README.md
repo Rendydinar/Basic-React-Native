@@ -1,1 +1,1 @@
-Belajar Lifecycle Pada React-Native
+BASIC Javascript di React.

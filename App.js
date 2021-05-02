@@ -20,6 +20,7 @@ import Position from "./src/pages/Position"
 import PropsDinamis from "./src/pages/PropsDinamis"
 import StateDinamis from "./src/pages/StateDinamis"
 import CommunicationComponent from "./src/pages/CommunicationComponent"
+import ReactNativeSvg from "./src/pages/ReactNativeSvg"
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
@@ -35,7 +36,7 @@ const App = () => {
   return (
     <View>
       <ScrollView>
-        <StylingComponent />
+        {/*<StylingComponent />
         <CardProduct />
         <SampleComponent />
         {isShow && (
@@ -46,7 +47,8 @@ const App = () => {
         )}
         <PropsDinamis />
         <StateDinamis />
-        <CommunicationComponent />
+        <CommunicationComponent />*/}
+        <ReactNativeSvg />
       </ScrollView>
     </View>
   );

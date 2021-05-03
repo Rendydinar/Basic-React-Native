@@ -21,17 +21,18 @@ import PropsDinamis from "./src/pages/PropsDinamis"
 import StateDinamis from "./src/pages/StateDinamis"
 import CommunicationComponent from "./src/pages/CommunicationComponent"
 import ReactNativeSvg from "./src/pages/ReactNativeSvg"
+import LocalAPI from "./src/pages/LocalAPI"
 
 const App = () => {
   const [isShow, setIsShow] = useState(true);
 
-  // useEffect(() => {
-  //   StatusBar.setHidden(true);
-  //   setIsShow(true)
-  //   setTimeout(() => {
-  //     setIsShow(false)
-  //   }, 6000);
-  // }, [])
+  useEffect(() => {
+    StatusBar.setHidden(true);
+    // setIsShow(true)
+    // setTimeout(() => {
+    //   setIsShow(false)
+    // }, 6000);
+  }, [])
 
   return (
     <View>
@@ -47,8 +48,9 @@ const App = () => {
         )}
         <PropsDinamis />
         <StateDinamis />
-        <CommunicationComponent />*/}
-        <ReactNativeSvg />
+        <CommunicationComponent />
+        <ReactNativeSvg />*/}
+        <LocalAPI />
       </ScrollView>
     </View>
   );
